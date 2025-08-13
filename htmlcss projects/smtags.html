@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Semantic Layout</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+    }
+    .container {
+      width: 600px;
+      display: grid;
+      grid-template-areas: 
+        "header"
+        "nav"
+        "main"
+        "footer";
+      gap: 10px;
+      padding: 10px;
+    }
+    header {
+      background: #cceeff;
+      padding: 20px;
+      text-align: center;
+      grid-area: header;
+    }
+    nav {
+      background: #fdd;
+      padding: 10px;
+      text-align: center;
+      grid-area: nav;
+    }
+    main {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      grid-gap: 10px;
+      grid-area: main;
+    }
+    section {
+      background: #e4f9a9;
+      padding: 20px;
+    }
+    aside {
+      background: #fff0a9;
+      padding: 20px;
+    }
+    article {
+      background: #e2d4f9;
+      padding: 20px;
+      margin-top: 10px;
+    }
+    footer {
+      background: #c0f9d8;
+      padding: 20px;
+      text-align: center;
+      grid-area: footer;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>&lt;header&gt;</header>
+    <nav>&lt;nav&gt;</nav>
+    <main>
+      <div>
+        <section>&lt;section&gt;</section>
+        <article>&lt;article&gt;</article>
+      </div>
+      <aside>&lt;aside&gt;</aside>
+    </main>
+    <footer>&lt;footer&gt;</footer>
+  </div>
+</body>
+</html>
